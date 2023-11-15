@@ -236,4 +236,28 @@ VALUES
 
 (11, 'Emerson Madruga', '2018-05-11', '2018-05-15', '2019-05-14', 'Apartamento', 'Willians Smith');
 
+Parte 2: 
+
+Pensando no banco que já foi criado para o Projeto do Hospital, realize algumas alterações nas tabelas e nos dados usando comandos de atualização e exclusão:
+
+Crie um script que adicione uma coluna “em_atividade” para os médicos, indicando se ele ainda está atuando no hospital ou não. 
+
+Crie um script para atualizar ao menos dois médicos como inativos e os demais em atividade.
+
+comandos: 
+
+
+ALTER TABLE medicos
+ADD COLUMN em_atividade VARCHAR(4);
+
+select * from medicos;
+
+UPDATE medicos
+SET em_atividade = 'sim'
+where null;
+
+UPDATE medicos
+SET em_atividade = 'não'
+where id_medicos = '7' and '9'
+
 
